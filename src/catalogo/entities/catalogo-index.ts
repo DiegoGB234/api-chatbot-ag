@@ -1,3 +1,4 @@
+import { CalendarioEscolarService } from "../services/calendario-escolar.service";
 import { ActividadesAcademicas } from "./actividades-academicas.entity";
 import { CalendarioEscolar } from "./calendario-escolar.entity";
 import { Catalogo } from "./catalogo.entity";

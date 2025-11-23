@@ -43,7 +43,7 @@ export class CalendarioEscolar {
   @Column({ type: 'varchar', length: 30 })
   cuatrimestre: string; // "Septiembre-Diciembre", "Enero-Abril", etc.
 
-  @ManyToOne(()=>Catalogo)
+  @ManyToOne(()=>Catalogo,(cat)=> cat.calendarioEscolar)
   @JoinColumn({name:'catalogo_id'})
   catalogo:Catalogo
 }

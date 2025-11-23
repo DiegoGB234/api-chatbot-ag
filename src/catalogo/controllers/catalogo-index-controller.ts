@@ -1,4 +1,5 @@
 import { ActividadesAcademicasController } from "./actividades-academicas.controller";
+import { CalendarioEscolarController } from "./calendario-escolar.controller";
 import { CatalogoController } from "./catalogo.controller";
 import { InformacionGeneralController } from "./informacion-general.controller";
 import { InfraestructuraController } from "./infraestructura.controller";
@@ -11,5 +12,6 @@ export const CatalogoControllers=[
     InformacionGeneralController,
     InfraestructuraController,
     PreguntasFrecuentesController,
-    TecnologiasController
+    TecnologiasController,
+    CalendarioEscolarController
 ]

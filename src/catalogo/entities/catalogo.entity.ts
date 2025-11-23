@@ -4,6 +4,7 @@ import { ActividadesAcademicas } from "./actividades-academicas.entity";
 import { PreguntasFrecuentes } from "./preguntas-frecuentes.entity";
 import { Infraestructura } from "./infraestructura.entity";
 import { Tecnologias } from "./tecnologias.entity";
+import { CalendarioEscolar } from "./calendario-escolar.entity";
 
 
 
@@ -33,4 +34,7 @@ export class Catalogo {
 
     @OneToMany(()=>Tecnologias,(tec)=>tec.catalogo)
     tecnologias:Tecnologias[];
+
+    @OneToMany(()=>CalendarioEscolar,(caleEs)=>caleEs.catalogo)
+    calendarioEscolar:CalendarioEscolar[];
 }   
