@@ -1,4 +1,5 @@
 import { ActividadesAcademicas } from "./actividades-academicas.entity";
+import { CalendarioEscolar } from "./calendario-escolar.entity";
 import { Catalogo } from "./catalogo.entity";
 import { InformacionGeneral } from "./informacion-general.entity";
 import { Infraestructura } from "./infraestructura.entity";
@@ -12,5 +13,6 @@ export const CatalogoEntites=[
     Infraestructura,
     PreguntasFrecuentes,
     Tecnologias,
+    CalendarioEscolar
     
 ]

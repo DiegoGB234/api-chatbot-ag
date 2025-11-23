@@ -7,7 +7,8 @@ export enum typeTechnology{
     BACKEND_FRAMEWORK='Framework Backend',
     DATABASE='Base de Datos',
     AI_PLATFORM='Platafforma de IA',
-    IDE='IDE'
+    IDE='IDE',
+    // MOBILE_FRAMEWORK='Movil FrameWork'
 }   
 
 @Entity('tecnologias')
@@ -18,6 +19,9 @@ export class Tecnologias{
 
     @Column({type:'varchar'})
     name:string;
+
+    @Column({type:'varchar'})
+    description:string
 
     @Column({type:'enum', enum:typeTechnology})
     type:typeTechnology

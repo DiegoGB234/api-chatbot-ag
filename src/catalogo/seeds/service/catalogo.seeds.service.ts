@@ -10,6 +10,7 @@ import { InformacionGeneral } from '../../entities/informacion-general.entity';
 import { ActividadesAcademicas } from '../../entities/actividades-academicas.entity';
 import { PreguntasFrecuentes } from '../../entities/preguntas-frecuentes.entity';
 import { CATALOGO_SEED_DATA } from '../data/catalogo.data';
+import { CalendarioEscolar } from 'src/catalogo/entities/calendario-escolar.entity';
 
 @Injectable()
 export class CatalogoSeedService {
@@ -33,6 +34,8 @@ export class CatalogoSeedService {
 
     @InjectRepository(Tecnologias,'CHATBOTconnection')
     private tecRepo: Repository<Tecnologias>,
+    @InjectRepository(CalendarioEscolar,'CHATBOTconnection')
+    private calRepo:Repository<CalendarioEscolar>
   ) {}
 
   async run() {
@@ -94,6 +97,15 @@ export class CatalogoSeedService {
             catalogo: savedCatalogo,
           }),
         );
+      }
+
+      for(const cale of data.calendarioEscolar){
+        await this.calRepo.save(
+          this.calRepo.create({
+            ...cale,
+            catalogo:savedCatalogo
+          })
+        )
       }
     }
 

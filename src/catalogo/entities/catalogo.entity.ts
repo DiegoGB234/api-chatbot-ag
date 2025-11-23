@@ -15,7 +15,7 @@ export class Catalogo {
     @Column({type:'varchar'})
     name:string;
 
-    @Column({type:'varchar'})
+    @Column({type:'longtext'})
     description:string;
     // relaciones
 
