@@ -2,7 +2,8 @@ import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { InformacionGeneral } from "./informacion-general.entity";
 import { ActividadesAcademicas } from "./actividades-academicas.entity";
 import { PreguntasFrecuentes } from "./preguntas-frecuentes.entity";
-import { Infraestructura } from "./infrestura.entity";
+import { Infraestructura } from "./infraestructura.entity";
+import { Tecnologias } from "./tecnologias.entity";
 
 
 
@@ -29,4 +30,7 @@ export class Catalogo {
 
     @OneToMany(()=>Infraestructura,(infraes)=>infraes.catalogo,{cascade:true})
     infraestructura:Infraestructura[];
+
+    @OneToMany(()=>Tecnologias,(tec)=>tec.catalogo)
+    tecnologias:Tecnologias[];
 }   

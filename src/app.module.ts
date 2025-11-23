@@ -4,6 +4,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { CatalogoControllers } from './catalogo/controllers/catalogo-index-controller';
 import { CatalogoEntites } from './catalogo/entities/catalogo-index';
 import { CatalogoServices } from './catalogo/services/catalogo-index-service';
+import { CatalogoSeedController } from './catalogo/seeds/controller/catalogo.seeds.controller';
+import { CatalogoSeedService } from './catalogo/seeds/service/catalogo.seeds.service';
+import { CatalogoService } from './catalogo/services/catalogo.service';
 
 @Module({
   imports: [
@@ -22,8 +25,8 @@ import { CatalogoServices } from './catalogo/services/catalogo-index-service';
     TypeOrmModule.forFeature([...CatalogoEntites], 'CHATBOTconnection'),
   ],
 
-  controllers: [...CatalogoControllers],
-  providers: [...CatalogoServices],
-  exports: [...CatalogoServices],
+  controllers: [CatalogoSeedController,...CatalogoControllers],
+  providers: [CatalogoSeedService,...CatalogoServices],
+  exports: [CatalogoSeedService,...CatalogoServices],
 })
 export class AppModule {}

@@ -11,7 +11,7 @@ export class  Infraestructura{
     name:string;
 
     @Column({type:'varchar'})
-    description:string
+    description:string;
 
     @ManyToOne(()=>Catalogo,(cat)=>cat.infraestructura,{onDelete:'CASCADE'})
     @JoinColumn({name:'catalogo_id'})

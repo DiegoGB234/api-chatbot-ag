@@ -22,7 +22,7 @@ export class Tecnologias{
     @Column({type:'enum', enum:typeTechnology})
     type:typeTechnology
 
-    @ManyToOne(()=>Catalogo)
+    @ManyToOne(()=>Catalogo,(cat)=>cat.tecnologias,{onDelete:'CASCADE'})
     @JoinColumn({name:'catalogo_id'})
     catalogo:Catalogo
 

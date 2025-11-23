@@ -3,13 +3,14 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { CreateCatalogoDto } from '../dto/create-catalogo.dto';
 import { UpdateCatalogoDto } from '../dto/update-catalogo.dto';
 import { CatalogoService } from '../services/catalogo.service';
+import { CreateRegisterCatalogoDto } from '../dto/create-register-catalogo.dto';
 
 @Controller('catalogo')
 export class CatalogoController {
   constructor(private readonly catalogoService: CatalogoService) {}
 
   @Post()
-  create(@Body() createCatalogoDto: CreateCatalogoDto) {
+  create(@Body() createCatalogoDto: CreateRegisterCatalogoDto) {
     return this.catalogoService.create(createCatalogoDto);
   }
 

@@ -1,7 +1,7 @@
 import { ActividadesAcademicas } from "./actividades-academicas.entity";
 import { Catalogo } from "./catalogo.entity";
 import { InformacionGeneral } from "./informacion-general.entity";
-import { Infraestructura } from "./infrestura.entity";
+import { Infraestructura } from "./infraestructura.entity";
 import { PreguntasFrecuentes } from "./preguntas-frecuentes.entity";
 import { Tecnologias } from "./tecnologias.entity";
 

@@ -6,12 +6,14 @@ export class ActividadesAcademicas{
     @PrimaryGeneratedColumn()
     id:number;
 
-    @Column({type:'date'})
-    date:Date
+    // @Column({ name: 'date', type: 'timestamp', nullable: true })
+    // date: Date;
+    
+    // @Column({type:'varchar'})
+    // period:string
 
     @Column({type:'varchar'})
-    period:string
-
+    name:string
 
     @ManyToOne(()=>Catalogo,(cat)=>cat.actividadesAcademicas,{onDelete:'CASCADE'})
     @JoinColumn({name:'catalogo_id'})
